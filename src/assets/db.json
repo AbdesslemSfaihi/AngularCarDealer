@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": "3de2",
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "test"
+    },
+    {
+      "id": "a59d",
+      "name": "aa",
+      "email": "aa@yahoo.fr",
+      "password": "aa"
+    },
+    {
+      "id": "8a81",
+      "name": "zz",
+      "email": "zz@gmail.com",
+      "password": "zz"
+    },
+    {
+      "id": "ca52",
+      "name": "ee",
+      "email": "ee@ee",
+      "password": "ee"
+    }
+  ],
+  "cars": [
+    {
+      "id": "1",
+      "name": "Audi R8 V10",
+      "description": "The Audi R8 V10 is a high-performance sports car known for its powerful engine and sleek design.",
+      "price": 150000,
+      "image": "https://www.motortrend.com/uploads/sites/10/2017/09/2018-audi-r8-coupe-angular-front.png?fit=around%7C875:492"
+    },
+    {
+      "id": "2",
+      "name": "BMW M8 Competition",
+      "description": "The BMW M8 Competition is a luxury grand tourer with exceptional performance and style.",
+      "price": 170000,
+      "image": "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=258F&client=byoc&paint=P0300&fabric=FLKSW&sa=S01MA,S01TH,S0302,S0319,S0322,S03MF,S0453,S04GQ,S04HB,S04MC,S05AC,S05AZ,S06AC,S06AK,S06C4,S06NW,S06U3,S06WD,S0712,S0760,S0776,S07M9,S07MA&angle=30"
+    },
+    {
+      "id": "3",
+      "name": "Mercedes-AMG C63",
+      "description": "The Mercedes-AMG C63 is a high-performance sedan known for its powerful engine and luxurious interior.",
+      "price": 140000,
+      "image": "https://www.gts-models.com/wp-content/uploads/2018/07/mercedes-benz-c63-amg-black-series-01.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Audi R8 V10",
+      "description": "The Audi R8 V10 is a high-performance sports car known for its powerful engine and sleek design.",
+      "price": 150000,
+      "image": "https://www.motortrend.com/uploads/sites/10/2017/09/2018-audi-r8-coupe-angular-front.png?fit=around%7C875:492"
+    },
+    {
+      "id": "5",
+      "name": "BMW M8 Competition",
+      "description": "The BMW M8 Competition is a luxury grand tourer with exceptional performance and style.",
+      "price": 170000,
+      "image": "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBM&vehicle=258F&client=byoc&paint=P0300&fabric=FLKSW&sa=S01MA,S01TH,S0302,S0319,S0322,S03MF,S0453,S04GQ,S04HB,S04MC,S05AC,S05AZ,S06AC,S06AK,S06C4,S06NW,S06U3,S06WD,S0712,S0760,S0776,S07M9,S07MA&angle=30"
+    },
+    {
+      "id": "6",
+      "name": "Mercedes-AMG C63",
+      "description": "The Mercedes-AMG C63 is a high-performance sedan known for its powerful engine and luxurious interior.",
+      "price": 140000,
+      "image": "https://www.gts-models.com/wp-content/uploads/2018/07/mercedes-benz-c63-amg-black-series-01.jpg"
+    }
+  ],
+  "buy": []
+}

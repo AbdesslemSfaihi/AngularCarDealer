@@ -1,0 +1,9 @@
+<div class="car-list">
+    <div *ngFor="let car of cars" class="car-card">
+        <img [src]="car.image" alt="{{ car.name }}">
+        <h3>{{ car.name }}</h3>
+        <p>{{ car.description }}</p>
+        <p>Price: {{ car.price | currency }}</p>
+        <button (click)="buyCar(car)">Buy</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="dashboard-container">
+    <aside class="sidebar">
+        <h2>Hello, {{ userName }}</h2>
+        <ul>
+            <li><a routerLink="/dashboard">My Dashboard</a></li>
+            <li><a routerLink="/cars">Buy Cars</a></li>
+            <li><a routerLink="/sell-cars">Sell Your Cars</a></li>
+            <li><a (click)="onLogout()">Logout</a></li>
+        </ul>
+    </aside>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

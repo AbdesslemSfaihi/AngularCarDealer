@@ -1,0 +1,36 @@
+<div class="container" id="container" [class.active]="isRegisterMode">
+    <div class="form-container sign-up" *ngIf="isRegisterMode">
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <h1>Create Account</h1>
+            <br />
+            <input formControlName="name" type="text" placeholder="Name" required>
+            <input formControlName="email" type="email" placeholder="Email" required>
+            <input formControlName="password" type="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div class="form-container sign-in" *ngIf="!isRegisterMode">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+            <h1>Login</h1>
+            <br />
+            <input formControlName="email" type="email" placeholder="Email" required>
+            <input formControlName="password" type="password" placeholder="Password" required>
+            <a href="#">→ Forget Your Password? ←</a>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left" (click)="toggleMode()">
+                <h1>Welcome Back!</h1>
+                <p>Already Registered? Click here to login</p>
+                <button class="hidden" id="login">Login</button>
+            </div>
+            <div class="toggle-panel toggle-right" (click)="toggleMode()">
+                <h1>Hello, Friend!</h1>
+                <p>New? Click here to register</p>
+                <button class="hidden" id="register">Register</button>
+            </div>
+        </div>
+    </div>
+</div>

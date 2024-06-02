@@ -1,0 +1,16 @@
+<!-- sell-cars.component.html -->
+<div *ngIf="selectedCars.length > 0; else noCars">
+    <h2>Your Selected Cars for Selling</h2>
+    <div *ngFor="let car of selectedCars">
+        <div>
+            <h3>{{ car.name }}</h3>
+            <p>{{ car.description }}</p>
+            <p>Price: {{ car.price | currency }}</p>
+            <button (click)="sellCar(car)">Sell</button>
+        </div>
+    </div>
+    <h3>Total Spent: {{ totalSpent | currency }}</h3>
+</div>
+<ng-template #noCars>
+    <p>No cars selected for selling.</p>
+</ng-template>
