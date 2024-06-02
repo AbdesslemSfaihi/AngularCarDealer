@@ -12,8 +12,9 @@ import { SellCarsService } from '../sell-cars.service';
 })
 export class DashboardComponent implements OnInit {
   userName!: string;
-  totalSpent: number = 0;
+  garageValue: number = 0;
   totalCars: number = 0;
+  totalSpent: number = 0;
 
   constructor(
     private userService: UserService,
@@ -25,11 +26,12 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.userName = this.userService.getUserName() || 'User';
-    this.spentService.totalSpent$.subscribe((totalSpent) => {
-      this.totalSpent = totalSpent;
+    this.spentService.garageValue$.subscribe((garageValue) => {
+      this.garageValue = garageValue;
     });
     this.fetchTotalCars();
     this.fetchTotalSpent();
+    this.totalSpent = this.sellCarsService.getTotalSpent();
   }
 
   fetchTotalCars() {
@@ -45,7 +47,7 @@ export class DashboardComponent implements OnInit {
 
   fetchTotalSpent() {
     this.sellCarsService.getBoughtCars().subscribe((boughtCars) => {
-      this.totalSpent = boughtCars.reduce((sum, car) => sum + car.price, 0);
+      this.garageValue = boughtCars.reduce((sum, car) => sum + car.price, 0);
     });
   }
 

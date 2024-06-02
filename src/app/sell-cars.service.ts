@@ -1,4 +1,3 @@
-// sell-cars.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -9,11 +8,8 @@ import { tap } from 'rxjs/operators';
 })
 export class SellCarsService {
   private apiUrl = 'http://localhost:3000';
-  private total: number;
 
-  constructor(private http: HttpClient) {
-    this.total = this.getTotalSpent();
-  }
+  constructor(private http: HttpClient) {}
 
   addSelectedCar(car: any) {
     const selectedCars = this.getSelectedCars();
@@ -31,10 +27,6 @@ export class SellCarsService {
     return this.http
       .post<any>(`${this.apiUrl}/buy`, car)
       .pipe(tap(() => this.addSelectedCar(car)));
-  }
-
-  getBoughtCars(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/buy`);
   }
 
   deleteBoughtCar(carId: number): Observable<any> {
@@ -56,10 +48,14 @@ export class SellCarsService {
     localStorage.removeItem('selectedCars');
   }
 
+  getBoughtCars(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/buy`);
+  }
+
   // Methods for total spent tracking
   updateTotalSpent(amount: number) {
-    this.total += amount;
-    localStorage.setItem('totalSpent', this.total.toString());
+    const totalSpent = this.getTotalSpent() + amount;
+    localStorage.setItem('totalSpent', totalSpent.toString());
   }
 
   getTotalSpent(): number {

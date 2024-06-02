@@ -7,11 +7,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SpentService {
   private totalSpentSource = new BehaviorSubject<number>(0);
-  totalSpent$ = this.totalSpentSource.asObservable();
+  garageValue$ = this.totalSpentSource.asObservable();
 
   constructor() {}
 
-  updateTotalSpent(totalSpent: number) {
-    this.totalSpentSource.next(totalSpent);
+  updateTotalSpent(garageValue: number) {
+    this.totalSpentSource.next(garageValue);
   }
 }
